@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teorie</title>
+</head>
+
+<body bgcolor="#325985">
+    <font face="Candara" color="#a1bbd1">
+        <font align="center">
+            <h2><i>Algoritm pentru transformarea din baza 10 in baza b</i></h2>
+        </font>
+        <font size="4" align="left">
+            <pre>
+p = 1;
+x = 0;
+
+while (nr != 0) // cat timp numarul nu este 0
+{
+    c = nr % b; // restul impartirii nr la b
+    x = x + p * c; // construim numarul in baza b
+    p = p * 10;
+    nr = nr / b;
+}
+        // x contine nr in baza b
+            </pre>
+        </font>
+        <font size="5" align="left">
+            <p>Observatii:</p>
+            <ol>
+                <li>Cifrele numerelor scrise in baza b (b<=10) sunt intre 0 si b-1.</li>
+                <li>Pentru a transforma din baza b in baza c se face trecerea prin baza 10 (b => 10 => c)</li>
+            </ol>
+        </font>
+    </font>
+</body>
+
+</html>
