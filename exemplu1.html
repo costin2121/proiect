@@ -11,7 +11,7 @@
     <font face="Candara">
         <font color="#a1bbd1">
             <h1>Problema pentru un numar:</h1>
-            <h3>Transformarea unui numar citit de la tastatura in baza 10 in baza b:</h3>
+            <h3>Se citeste un numar in baza 10 <i>n</i> si o baza <i>b</i> de la tastatura. Sa se afiseze suma cifrelor numarului n in baza b.</h3>
             <font size="4">
                 <pre>
 #include <iostream>
@@ -20,7 +20,7 @@ using namespace std;
 
 int main()
 {
-    long long n, b, x = 0, c, p = 1;
+    long long n, b, x = 0, c, p = 1, s = 0;
     
     cin >> n >> b; // Se citesc de la tastatura numarul n si baza b 
     
@@ -32,7 +32,13 @@ int main()
         n = n / b;
     }
     
-    cout << x;
+    while (x != 0)
+    {
+        s = s + x % 10;
+        x = x / 10;
+    }
+
+    cout << s;
     
     return 0;
 }
